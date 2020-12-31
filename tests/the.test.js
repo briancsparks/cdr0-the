@@ -1,13 +1,17 @@
 
 const test            = require('ava');
-const underTest       = require('..');
+const mkThe           = require('..');
 
 // -------------------------------------------------------------------------------------------------------------------
 test('ava works', (t) => {
   t.pass();
 });
 
+test('blue', (t) => {
+  const blue = mkThe('blue', function () { return {a:42}; });
 
+  t.deepEqual(blue(), {a:42});
+});
 
 
 
